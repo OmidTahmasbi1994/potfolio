@@ -77,9 +77,9 @@ export const MobileNav = (props) => {
         <Link
           to="about_me"
           smooth={true}
-          offset={-400}
-          duration={1000}
-          delay={100}
+          offset={-350}
+          duration={1500}
+          delay={50}
           className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
           onClick={() => props.closeFn(false)}
         >
