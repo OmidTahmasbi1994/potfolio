@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 export const Navbar = () => {
   const [tog, setTog] = useState(false);
@@ -9,30 +8,48 @@ export const Navbar = () => {
   return (
     <nav className="sticky top-0 left-0 right-0 bg-white-75 px-10 py-5 backdrop-blur-sm">
       <div className="flex flex-row justify-between items-center">
-        <Link to="/">
+        <span>
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className=" max-md:text-2xl font-semibold text-blue-500 capitalize"
+            className="text-3xl max-xl:text-2xl font-semibold text-blue-500 capitalize"
           >
             omid tahmasebi
           </motion.h1>
-        </Link>
-        <div className="max-md:hidden capitalize">
+        </span>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="flex flex-row justify-center items-center gap-4 capitalize max-md:hidden"
+        >
           <Link
-            to="/"
-            className="text-blue-500 text-md font-semibold ml-5 cursor-pointer"
+            to="about_me"
+            smooth={true}
+            offset={-40}
+            duration={1000}
+            delay={100}
+            className="text-blue-500 text-sm font-semibold cursor-pointer max-xl:text-xs"
           >
-            home
+            about me
           </Link>
-          <Link
-            to="/user"
-            className="text-blue-500 text-md font-semibold ml-5 border-solid border-2 border-blue-500 px-3 py-2 rounded-3xl cursor-pointer"
-          >
-            login
-          </Link>
-        </div>
+          <span className="text-blue-500 text-sm font-semibold cursor-pointer max-xl:text-xs">
+            skills
+          </span>
+          <span className="text-blue-500 text-sm font-semibold cursor-pointer max-xl:text-xs">
+            education
+          </span>
+          <span className="text-blue-500 text-sm font-semibold cursor-pointer max-xl:text-xs">
+            expriences
+          </span>
+          <span className="text-blue-500 text-sm font-semibold cursor-pointer max-xl:text-xs">
+            reseaches
+          </span>
+          <span className="text-blue-500 text-sm font-semibold cursor-pointer max-xl:text-xs">
+            contact
+          </span>
+        </motion.div>
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -43,34 +60,61 @@ export const Navbar = () => {
           {tog ? "-" : "+"}
         </motion.span>
       </div>
-      {tog && <MobileNav />}
+      {tog && <MobileNav closeFn={setTog} />}
     </nav>
   );
 };
 
-export const MobileNav = () => {
+export const MobileNav = (props) => {
   return (
     <motion.div
-      initial={{ y:-12 }}
-      animate={{ y:0 }}
-      transition={{duration:0.3 }}
+      initial={{ y: -12 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.4 }}
       className="hidden max-md:block mt-5 bg-white-75 "
     >
       <div className="flex flex-col justify-center items-start px-1 py-4 capitalize">
         <Link
-          to="/"
+          to="about_me"
+          smooth={true}
+          offset={-400}
+          duration={1000}
+          delay={100}
           className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
-          onClick={()=>setTog(false)}
+          onClick={() => props.closeFn(false)}
         >
-          home
+          about me
         </Link>
-        <Link
-          to="/user"
-          className="my-3 text-blue-500 text-sm font-semibold border-solid border-2 border-blue-500 px-2 py-1 rounded-3xl cursor-pointer"
-          onClick={()=>setTog(false)}
+        <span
+          className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
+          onClick={() => props.closeFn(false)}
         >
-          login
-        </Link>
+          skills
+        </span>
+        <span
+          className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
+          onClick={() => props.closeFn(false)}
+        >
+          education
+        </span>
+        <span
+          className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
+          onClick={() => props.closeFn(false)}
+        >
+          experiences
+        </span>
+        <span
+          className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
+          onClick={() => props.closeFn(false)}
+        >
+          researches
+        </span>
+        <span
+          className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
+          onClick={() => props.closeFn(false)}
+        >
+          contact
+        </span>
       </div>
     </motion.div>
   );

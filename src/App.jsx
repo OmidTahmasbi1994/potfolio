@@ -1,18 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navbar";
-import { Home } from "./routes/home";
-import { User } from "./routes/user";
+import { About } from "./components/aboutMe";
+import {Skills} from './components/skills'
 
 function App() {
 
   return (
-    <Router>
+    <div className="w-full min-h-screen bg-white px-5 py-6 max-sm:px-1">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/user" element={<User/>}/>
-      </Routes>
-    </Router>
+      <About/>
+      <Skills/>
+    </div>
+      
+      
   );
 }
 
