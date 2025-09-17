@@ -11,13 +11,16 @@ export const About = () => {
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
-          className="flex flex-row justify-start items-center border-solid border-1 border-gray-200 rounded-lg shadow-lg shadow-gray-300 max-xl:items-center max-lg:items-center max-md:items-start max-sm:items-start"
+          className=" border-solid border-1 border-gray-200 rounded-2xl shadow-lg shadow-gray-300 min-md:flex min-md:justify-start min-md:items-center min-md:p-7"
         >
-          <img
-            className="w-[25%] rounded-lg ml-5 my-5 max-sm:w-[20%] max-sm:mt-3 max-sm:ml-2"
-            src={profileImage}
-          />
-          <p className="text-gray-500 text-sm text-left pl-10 pr-10 py-7 leading-7 max-sm:pl-4 max-sm:pr-4 max-sm:pt-4 max-sm:pb-5 max-sm:text-xs max-sm:leading-6">
+          <div className="max-md:w-[20%] max-md:rounded-[100%] max-md:border-solid max-md:border-2 max-md:border-gray-400 max-md:float-left max-md:mt-4 max-md:ml-4 max-md:mr-3">
+            <img
+              className="max-md:rounded-[100%] min-md:rounded-2xl"
+              src={profileImage}
+            />
+          </div>
+
+          <p className="text-gray-500 text-sm text-left leading-8 max-md:text-xs max-md:mx-8 max-md:pb-8 max-md:pt-5 max-md:leading-6 min-md:p-7">
             The world around us constantly confronts us with various events. An
             endless variety of bitter and sweet events. My belief and faith is
             that each of these big and small events is accompanied by a code, a
@@ -26,9 +29,9 @@ export const About = () => {
             that gives light and the earth that gives life. Years ago, when this
             idea was formed in me, I decided to step into the world of codes and
             messages.
-            <span className="block mt-5 text-sm max-sm:mt-3 max-sm:text-xs font-semibold">
-              Now I am a programmer and eager to learn and create.
-            </span>
+            <p className="font-semibold max-md:text-xs min-md:mt-5 max-md:mt-4">
+              Now I'm a programmer, An eager to learn and create . . .
+            </p>
           </p>
         </motion.div>
       </section>
