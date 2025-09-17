@@ -6,7 +6,7 @@ export const Navbar = () => {
   const [tog, setTog] = useState(false);
 
   return (
-    <nav className="sticky top-0 left-0 right-0 bg-white-75 px-10 py-5 backdrop-blur-sm">
+    <nav className="sticky top-0 left-0 right-0 bg-white-75 px-7 py-5 backdrop-blur-sm">
       <div className="flex flex-row justify-between items-center">
         <span>
           <motion.h1
