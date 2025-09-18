@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="w-full min-h-screen bg-white px-5 py-6 max-sm:px-1">
-      <Navbar />
+      <Navbar/>
       <About/>
       <Skills/>
     </div>

@@ -34,9 +34,16 @@ export const Navbar = () => {
           >
             about me
           </Link>
-          <span className="text-blue-500 text-sm font-semibold cursor-pointer max-xl:text-xs">
+          <Link
+            to="skills"
+            smooth={true}
+            offset={-40}
+            duration={1000}
+            delay={100}
+            className="text-blue-500 text-sm font-semibold cursor-pointer max-xl:text-xs"
+          >
             skills
-          </span>
+          </Link>
           <span className="text-blue-500 text-sm font-semibold cursor-pointer max-xl:text-xs">
             education
           </span>
@@ -79,18 +86,23 @@ export const MobileNav = (props) => {
           smooth={true}
           offset={-350}
           duration={1500}
-          delay={50}
+          delay={0}
           className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
           onClick={() => props.closeFn(false)}
         >
           about me
         </Link>
-        <span
+        <Link
+          to="skills"
+          smooth={true}
+          offset={-350}
+          duration={1500}
+          delay={0}
           className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
           onClick={() => props.closeFn(false)}
         >
           skills
-        </span>
+        </Link>
         <span
           className="mx-1 my-3 text-blue-500 text-sm font-semibold cursor-pointer"
           onClick={() => props.closeFn(false)}
