@@ -29,7 +29,7 @@ export const About = () => {
             that gives light and the earth that gives life. Years ago, when this
             idea was formed in me, I decided to step into the world of codes and
             messages.
-            <p className="max-md:text-xs min-md:mt-5 max-md:mt-4">
+            <p className="max-md:text-xs min-md:mt-5 max-md:mt-3">
               Now I'm a programmer, An eager to learn and create . . .
             </p>
           </p>
