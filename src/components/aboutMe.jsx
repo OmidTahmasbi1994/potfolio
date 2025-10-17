@@ -11,7 +11,7 @@ export const About = () => {
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
-          className=" border-solid border-1 border-gray-200 rounded-2xl shadow-lg shadow-gray-300 min-md:flex min-md:justify-start min-md:items-center min-md:p-7"
+          className="min-md:flex min-md:justify-start min-md:items-center min-md:p-7"
         >
           <div className="max-md:w-[20%] max-md:rounded-[100%] max-md:border-solid max-md:border-2 max-md:border-gray-400 max-md:float-left max-md:mt-4 max-md:ml-4 max-md:mr-3">
             <img
@@ -29,7 +29,7 @@ export const About = () => {
             that gives light and the earth that gives life. Years ago, when this
             idea was formed in me, I decided to step into the world of codes and
             messages.
-            <p className="font-semibold max-md:text-xs min-md:mt-5 max-md:mt-4">
+            <p className="max-md:text-xs min-md:mt-5 max-md:mt-4">
               Now I'm a programmer, An eager to learn and create . . .
             </p>
           </p>
