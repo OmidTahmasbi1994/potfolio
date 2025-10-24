@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = () => {
   const [tog, setTog] = useState(false);
@@ -68,10 +71,10 @@ export const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="hidden max-md:block text-blue-500 text-4xl font-bold cursor-pointer"
+          className="hidden max-md:block text-blue-500 text-2xl font-bold cursor-pointer"
           onClick={() => setTog(!tog)}
         >
-          {tog ? "-" : "+"}
+          {tog ? (<FontAwesomeIcon icon={faXmark}/>) : (<FontAwesomeIcon icon={faBars}/>)}
         </motion.span>
       </div>
       {tog && <MobileNav closeFn={setTog} />}

@@ -21,7 +21,7 @@ export const Education = () => {
               <img src={payamenoor} />
             </div>
             <div className="">
-              <p className="max-md:text-xs">BSc in Computer Engineering at Payamenoor University - Iran</p>
+              <p className="max-md:text-xs font-[tahoma]">BSc in Computer Engineering at Payamenoor University - Iran</p>
             </div>
           </div>
 
@@ -30,7 +30,7 @@ export const Education = () => {
               <img src={farhangian} />
             </div>
             <div className="">
-              <p className="max-md:text-xs">BSc in Educational Sciences at Farhangian University - Iran</p>
+              <p className="max-md:text-xs font-[tahoma]">BSc in Educational Sciences at Farhangian University - Iran</p>
             </div>
           </div>
         </motion.div>
